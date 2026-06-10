@@ -26,16 +26,36 @@
 
 # Por fim, mostre os resultados formatados na tela.
 """
+# ==========================================
+# ETAPA 1: Variáveis fixas no código
+# ==========================================
 
-salario = 3000.0
-taxa_imposto = 15.0
-valor_imposto = salario * (taxa_imposto / 100)
-salario_final = salario - valor_imposto
-print(f"Salário Final: R$ {salario_final}")
-salario_usuario = float(input("Digite o seu salário: "))
-taxa_usuario = float(input("Digite a taxa de imposto (ex: 15): "))
+salario = 2200.0
+taxa_de_imposto = 12.0
 
-valor_imposto_usuario = salario_usuario * (taxa_usuario / 100)
-salario_final_usuario = salario_usuario - valor_imposto_usuario
+# Cálculos
+valor_do_imposto = salario * (taxa_de_imposto / 100)
+salario_final = salario - valor_do_imposto
 
-print(f"Seu Salário Final será: R$ {salario_final_usuario:.2f}")
+print("--- RESULTADOS DA ETAPA 1 ---")
+print("Salario original: ", salario)
+print("Taxa de imposto: ", taxa_de_imposto)
+print("Valor do imposto descontado: ", valor_do_imposto)
+print("Salario final: ", salario_final)
+
+# ==========================================
+# ETAPA 2: Entrada de dados do usuário
+# ==========================================
+
+salario_usuario = float(input("Digite o seu salario: "))
+taxa_usuario = float(input("Digite a taxa de imposto (ex: 10 para 10%): "))
+
+imposto_usuario = salario_usuario * (taxa_usuario / 100)
+salario_final_usuario = salario_usuario - imposto_usuario
+
+print("--- RESULTADOS DA ETAPA 2 ---")
+print("Seu salario: R$", salario_usuario)
+print("Sua taxa:", taxa_usuario, "%")
+print("Imposto a pagar: R$", imposto_usuario)
+print("Salario liquido final: R$", salario_final_usuario)
+
